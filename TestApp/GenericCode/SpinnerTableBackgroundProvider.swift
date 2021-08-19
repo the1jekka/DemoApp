@@ -14,7 +14,8 @@ struct SpinnerTableBackgroundProvider {
         view.addSubview(activityContainerView)
         activityContainerView.addSubview(activityIndicator)
         
-        activityContainerView.backgroundColor = UIColor.black.withAlphaComponent(0.4)
+        activityContainerView.backgroundColor = .black
+        activityContainerView.alpha = 0.2
         activityContainerView.layer.cornerRadius = 8
         activityContainerView.layer.masksToBounds = true
         activityContainerView.translatesAutoresizingMaskIntoConstraints = false

@@ -4,7 +4,8 @@ class HotelDetailsImageTableViewCell: UITableViewCell {
     
     private let contentImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .scaleAspectFill
+        imageView.layer.masksToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
         
         return imageView
@@ -15,7 +16,6 @@ class HotelDetailsImageTableViewCell: UITableViewCell {
         self.configure()
     }
     
-    @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
